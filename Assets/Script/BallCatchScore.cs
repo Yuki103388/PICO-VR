@@ -16,6 +16,14 @@ public class BallCatchScore : MonoBehaviour
         grabInteractable.selectExited.AddListener(OnReleased);
     }
 
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Space))
+    //    {
+    //        ScoreManager.instance.AddScore(1);
+    //    }
+    //}
+
     private void OnCaught(SelectEnterEventArgs args)
     {
         if (alreadyScored)
