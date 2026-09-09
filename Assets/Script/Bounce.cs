@@ -8,11 +8,11 @@ public class Bounce : MonoBehaviour
     [Header("Speed Settings")]
     public float wallSpeedMultiplier = 1.2f;   // sneller na muur hit
     public float groundSlowMultiplier = 0.8f;  // langzamer na grond hit
-    public float maxSpeed = 15f;
-    public float minSpeed = 1f;
+    public float maxSpeed = 15;
+    public float minSpeed = 1;
 
     [Header("Bounce Settings")]
-    public float extraBounceForce = 2f;
+    public float extraBounceForce = 2;
 
     private void Awake()
     {
