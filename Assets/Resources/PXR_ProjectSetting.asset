@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 261e5777ad4ae374eb318821653de6aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 124008f7f58c55943a891c8a87f17b58, type: 3}
   m_Name: PXR_ProjectSetting
   m_EditorClassIdentifier: Unity.XR.PICO::Unity.XR.PXR.PXR_ProjectSetting
   useContentProtect: 0

@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 563682312a45bbe4bbd8d243e5e14608, type: 3}
+  m_Script: {fileID: 11500000, guid: 60b2bae2e0ce56f4e816ea9fd1bf83c5, type: 3}
   m_Name: PXR_Loader
   m_EditorClassIdentifier: Unity.XR.PICO::Unity.XR.PXR.PXR_Loader
