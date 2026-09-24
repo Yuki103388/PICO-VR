@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e81827170f37324ca5bab34088abd3b, type: 3}
+  m_Name: BasketBall
+  m_EditorClassIdentifier: Assembly-CSharp::BallData
+  BallName: BasketBall
+  BallMaterial: {fileID: 2100000, guid: 10b7871266d1efe43ae6ef0280580812, type: 2}
+  Mass: 0.6
+  LinearDamping: 0.05
+  AngularDamping: 0.05
+  PhysicsMaterial: {fileID: 13400000, guid: ed35f0fa64c9d0a48be3d367f3e8d7fb, type: 2}
+  WallSpeedMultiplier: 1.1
+  GroundSlowMultiplier: 0.9
+  MaxSpeed: 15
+  MinSpeed: 0.5
+  ExtraBounceForce: 0.5

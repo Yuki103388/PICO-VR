@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b38f630c857d4514ba541ff7fca3d866
+guid: 10b7871266d1efe43ae6ef0280580812
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
@@ -8,8 +8,8 @@ NativeFormatImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 309713
-  packageName: ToonTastic - Beach Props Pack
+  productId: 293937
+  packageName: Free Sport Balls
   packageVersion: 1.0
-  assetPath: Assets/Akduman/ToonTastic - Beach Props/Materials/ColorPalette_128.mat
-  uploadId: 804330
+  assetPath: Assets/Saritasa/Models/Sport_Balls/Materials/Basketball.mat
+  uploadId: 686392

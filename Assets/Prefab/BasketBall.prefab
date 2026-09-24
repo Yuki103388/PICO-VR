@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7130587461680662287}
   - component: {fileID: 7274518599382299592}
   m_Layer: 0
-  m_Name: BeachBall
+  m_Name: BasketBall
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,7 +34,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4.27, z: 1.79}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -46,7 +46,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3430576197418655224}
-  m_Mesh: {fileID: 879429335378747303, guid: 60cd230a1191ac7489b03d43a350f3ab, type: 3}
+  m_Mesh: {fileID: 2342459666381787544, guid: 2b3788a0f64f23449a9c118bcd1db04d, type: 3}
 --- !u!23 &67962766426101180
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -72,7 +72,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 526ba9ba656d24c4b8e2dc57e113f44d, type: 2}
+  - {fileID: 2100000, guid: 10b7871266d1efe43ae6ef0280580812, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,7 +103,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3430576197418655224}
-  m_Material: {fileID: 13400000, guid: 3bcf9806ba4da3e44883086c03621df5, type: 2}
+  m_Material: {fileID: 13400000, guid: ed35f0fa64c9d0a48be3d367f3e8d7fb, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -115,7 +115,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.12000002
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &7132122399856144478
 Rigidbody:
@@ -314,4 +314,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8348ff333518054aa478e248a1c7c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ball
-  Data: {fileID: 11400000, guid: dc22cb27d9590144e8a70ecfa95de4df, type: 2}
+  Data: {fileID: 11400000, guid: f219681a3cb9f2c449240131eb54a187, type: 2}
