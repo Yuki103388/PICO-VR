@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7130587461680662287}
   - component: {fileID: 7274518599382299592}
   m_Layer: 0
-  m_Name: BasketBall
+  m_Name: Baseball
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,7 +46,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3430576197418655224}
-  m_Mesh: {fileID: 2342459666381787544, guid: 2b3788a0f64f23449a9c118bcd1db04d, type: 3}
+  m_Mesh: {fileID: -8279484070357006803, guid: 58221b671a0c3af4c86677e9fb49b604, type: 3}
 --- !u!23 &67962766426101180
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -72,7 +72,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 10b7871266d1efe43ae6ef0280580812, type: 2}
+  - {fileID: 2100000, guid: ae7b6fa976e8e4b4c9c9860cfb3f8e64, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,7 +103,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3430576197418655224}
-  m_Material: {fileID: 13400000, guid: ed35f0fa64c9d0a48be3d367f3e8d7fb, type: 2}
+  m_Material: {fileID: 13400000, guid: 7d5a63babb359ea4186980555a23ecbc, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -115,7 +115,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.12000003
+  m_Radius: 0.037999995
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &7132122399856144478
 Rigidbody:
@@ -156,11 +156,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caee694903a73704e8dac45634c64105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bounce
-  wallSpeedMultiplier: 1.2
+  wallSpeedMultiplier: 1.05
   groundSlowMultiplier: 0.8
   maxSpeed: 15
   minSpeed: 1
-  extraBounceForce: 1
+  extraBounceForce: 0.2
 --- !u!114 &5826824680940260009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,4 +314,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8348ff333518054aa478e248a1c7c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ball
-  Data: {fileID: 11400000, guid: f219681a3cb9f2c449240131eb54a187, type: 2}
+  Data: {fileID: 11400000, guid: 6e1747d4ca3c3224d881bc34fce76f49, type: 2}
