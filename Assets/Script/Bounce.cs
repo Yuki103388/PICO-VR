@@ -24,6 +24,11 @@ public class Bounce : MonoBehaviour
         if (collision.gameObject.CompareTag("Wall"))
         {
             IncreaseSpeed();
+            Renderer wallRenderer = collision.gameObject.GetComponentInChildren<Renderer>();
+            if (wallRenderer != null)
+            {
+                wallRenderer.material.color = Random.ColorHSV();
+            }
         }
 
         if (collision.gameObject.CompareTag("Ground"))
