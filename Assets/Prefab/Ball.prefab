@@ -161,6 +161,9 @@ MonoBehaviour:
   maxSpeed: 15
   minSpeed: 1
   extraBounceForce: 1
+  stuckSpeed: 0.3
+  stuckTime: 1.5
+  unstuckForce: 5
 --- !u!114 &5826824680940260009
 MonoBehaviour:
   m_ObjectHideFlags: 0

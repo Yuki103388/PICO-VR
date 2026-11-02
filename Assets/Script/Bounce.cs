@@ -24,6 +24,14 @@ public class Bounce : MonoBehaviour
 
     private float stuckTimer;
 
+    [Header("Ground Settings")]
+    public float groundSlowCooldown = 0.75f;
+    public float minGroundImpact = 2f;
+
+    private float lastGroundSlowTime = -10f;
+
+
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -37,6 +45,7 @@ public class Bounce : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        //bal bounce
         if (collision.gameObject.CompareTag("Wall"))
         {
             IncreaseSpeed();
@@ -46,10 +55,17 @@ public class Bounce : MonoBehaviour
                 wallRenderer.material.color = Random.ColorHSV();
             }
         }
-
+        // bal slowdown
         if (collision.gameObject.CompareTag("Ground"))
         {
-            DecreaseSpeed();
+            float impactSpeed = collision.relativeVelocity.magnitude;
+
+            if (impactSpeed >= minGroundImpact &&
+                Time.time >= lastGroundSlowTime + groundSlowCooldown)
+            {
+                DecreaseSpeed();
+                lastGroundSlowTime = Time.time;
+            }
         }
     }
 
