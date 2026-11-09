@@ -19,7 +19,6 @@ public class BallCatchScore : MonoBehaviour
 
     private void Start()
     {
-        // BallSpawner automatisch zoeken in de scene
         ballSpawner = FindFirstObjectByType<BallSpawner>();
     }
 
@@ -28,24 +27,29 @@ public class BallCatchScore : MonoBehaviour
         if (alreadyScored)
             return;
 
+        alreadyScored = true;
+
         // Score verhogen
         ScoreManager.instance.AddScore(1);
 
-        // Score doorgeven aan BallSpawner
+        // Controleren of een nieuwe bal nodig is
         if (ballSpawner != null)
         {
-            ballSpawner.UpdateBallForScore
-            (
+            ballSpawner.UpdateBallForScore(
                 ScoreManager.instance.score
             );
         }
-
-        alreadyScored = true;
     }
 
     private void OnReleased(SelectExitEventArgs args)
     {
         alreadyScored = false;
+
+        // Controleren of de bal vervangen moet worden
+        if (ballSpawner != null)
+        {
+            ballSpawner.OnBallReleased(gameObject);
+        }
     }
 
     private void OnDestroy()

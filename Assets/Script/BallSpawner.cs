@@ -11,9 +11,9 @@ public class BallSpawner : MonoBehaviour
     private GameObject currentBall;
 
     private int currentBallIndex = 0;
-    private int nextBallIndex = 0;
+    private bool replaceOnRelease = false;
 
-    void Start()
+    private void Start()
     {
         SpawnBall();
     }
@@ -30,16 +30,40 @@ public class BallSpawner : MonoBehaviour
         );
     }
 
-    // Wordt aangeroepen wanneer de speler punten krijgt
+    // Controleren of de speler genoeg punten heeft
     public void UpdateBallForScore(int score)
     {
         if (ballPrefabs == null || ballPrefabs.Length == 0)
             return;
 
-        nextBallIndex = Mathf.Min(
-            Mathf.Max(0, score) / Mathf.Max(1, CatchesPerBall),
-            ballPrefabs.Length - 1
-        );
+        if (score <= 0 || score % Mathf.Max(1, CatchesPerBall) != 0)
+            return;
+
+        // Volgende bal kiezen
+        currentBallIndex++;
+
+        // Opnieuw beginnen als alle ballen zijn geweest
+        if (currentBallIndex >= ballPrefabs.Length)
+        {
+            currentBallIndex = 0;
+        }
+
+        // Bal vervangen zodra de speler hem loslaat
+        replaceOnRelease = true;
+    }
+
+    // Wordt aangeroepen wanneer de speler de bal loslaat
+    public void OnBallReleased(GameObject releasedBall)
+    {
+        if (!replaceOnRelease)
+            return;
+
+        if (releasedBall != currentBall)
+            return;
+
+        replaceOnRelease = false;
+
+        RespawnBall(releasedBall);
     }
 
     public void RespawnBall(GameObject oldBall)
@@ -49,8 +73,9 @@ public class BallSpawner : MonoBehaviour
 
         Destroy(oldBall);
 
-        // Nieuwe bal kiezen op basis van de score
-        currentBallIndex = nextBallIndex;
+        currentBall = null;
+
+        replaceOnRelease = false;
 
         SpawnBall();
     }
