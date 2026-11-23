@@ -1,18 +1,5 @@
 {
   "dependencies": {
-    "com.bytedance.pico.xr": {
-      "version": "6.2.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0",
-        "com.unity.textmeshpro": "3.0.6",
-        "com.unity.xr.core-utils": "2.3.0",
-        "com.unity.xr.management": "4.0.0",
-        "com.unity.xr.interaction.toolkit": "2.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.ai.navigation": {
       "version": "2.0.14",
       "depth": 0,
@@ -184,14 +171,6 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
-    },
-    "com.unity.textmeshpro": {
-      "version": "5.0.0",
-      "depth": 1,
-      "source": "builtin",
-      "dependencies": {
-        "com.unity.ugui": "2.0.0"
-      }
     },
     "com.unity.timeline": {
       "version": "1.8.13",
